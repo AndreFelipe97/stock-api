@@ -1,1 +1,9 @@
 node_modules
+ormconfig.json
+.idea/
+.vscode/
+dist
+build
+/*.js
+.env
+coverage
