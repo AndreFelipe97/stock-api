@@ -1,0 +1,11 @@
+{
+  "name": "stock_management_system",
+  "version": "1.0.0",
+  "description": "Product registration management system in store inventory",
+  "main": "index.js",
+  "author": "André Felipe Rodrigues de Freitas",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
