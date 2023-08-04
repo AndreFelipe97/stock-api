@@ -7,7 +7,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
-    "eslint": "eslint . --ext .ts"
+    "eslint": "eslint . --ext .ts",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -32,6 +33,6 @@
     "express-async-errors": "^3.1.1",
     "pg": "^8.11.2",
     "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.2.29"
+    "typeorm": "0.2.29"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "any-type",
+  "host": "any-host",
+  "port": "any-number-port",
+  "username": "any-username",
+  "password": "any-password",
+  "database": "any-database",
+  "migrations": [
+    "./src/shared/typeorm/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/shared/typeorm/migrations"
+  }
+}
