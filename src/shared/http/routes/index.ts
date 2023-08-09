@@ -2,6 +2,7 @@ import { Request, Response, Router } from 'express';
 import productsRoutes from '@modules/products/routes/Products.routes';
 import usersRoutes from '@modules/users/routes/Users.routes';
 import sessionsRoutes from '@modules/users/routes/Sessions.routes';
+import isAuthenticated from '@shared/middlewares/isAuthenticated';
 
 const routes = Router();
 
@@ -10,7 +11,7 @@ routes.get('/', (request: Request, response: Response) => {
 });
 
 routes.use('/sessions', sessionsRoutes);
-routes.use('/products', productsRoutes);
+routes.use('/products', isAuthenticated, productsRoutes);
 routes.use('/users', usersRoutes);
 
 export default routes;
