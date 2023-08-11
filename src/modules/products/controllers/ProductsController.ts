@@ -4,8 +4,9 @@ import DetailProductService from '../services/DetailProductService';
 import CreateProductService from '../services/CreateProductService';
 import UpdateProductService from '../services/UpdateProductService';
 import DeleteProductService from '../services/DeleteProductService';
+import IController from '@shared/interfaces/IController';
 
-export default class ProductController {
+export default class ProductController implements IController {
   public async list(request: Request, response: Response): Promise<Response> {
     const listProductService = new ListProductService();
     const products = await listProductService.execute();
