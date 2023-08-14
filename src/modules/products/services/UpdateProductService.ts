@@ -1,6 +1,7 @@
 import Product from '@modules/products/typeorm/entities/Product';
 import { ProductRepository } from '@modules/products/typeorm/repositories/ProductsRepository';
 import AppError from '@shared/errors/AppError';
+import { IService } from '@shared/interfaces/IServices';
 import { getCustomRepository } from 'typeorm';
 
 interface IUpdateProductRequest {
@@ -10,7 +11,9 @@ interface IUpdateProductRequest {
   quantity: number;
 }
 
-export default class UpdateProductService {
+export default class UpdateProductService
+  implements IService<IUpdateProductRequest, Product>
+{
   public async execute({
     id,
     name,
